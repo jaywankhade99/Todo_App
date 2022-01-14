@@ -4,7 +4,7 @@ class Todo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "aalekh",
+      hero: "batman",
     };
     this.inputRef = React.createRef();
   }
@@ -13,12 +13,15 @@ class Todo extends Component {
     console.log("MOunting", this.inputRef);
   }
 
-  handleClick=()=>{
-      alert("Welcome "+this.inputRef.current.value);
-  }
+  handleClick = () => {
+    alert("Welcome " + this.inputRef.current.value);
+  };
   render() {
-    return (
-      <>
+    const { hero } = this.state;
+    const { place } = this.props;
+
+    if (place) {
+      return (
         <div className="container-fluid">
           <div className="row">
             <div className="col-12" style={{ textAlign: "center" }}>
@@ -26,12 +29,16 @@ class Todo extends Component {
               <input typeof="text" ref={this.inputRef} />
             </div>
             <div className="col-12" style={{ textAlign: "center" }}>
-              <button className="btn btn-primary" onClick={this.handleClick}>Click Here</button>
+              <button className="btn btn-primary" onClick={this.handleClick}>
+                Click Here
+              </button>
             </div>
           </div>
         </div>
-      </>
-    );
+      );
+    } else {
+      throw new Error("No Place");
+    }
   }
 }
 
