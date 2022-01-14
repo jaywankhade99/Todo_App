@@ -1,13 +1,13 @@
 import "./App.css";
-import Todo from "./components/Todo";
+import Demo from "./components/Demo";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
     <>
-      <Todo place="mumbai" />
+      <Demo place="mumbai" />
       <ErrorBoundary>
-        <Todo />
+        <Demo />
       </ErrorBoundary>
     </>
   );
