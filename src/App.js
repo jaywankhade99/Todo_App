@@ -5,7 +5,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 function App() {
   return (
     <>
-      <Demo place="mumbai" />
+      <Demo place="Delhi" />
       <ErrorBoundary>
         <Demo />
       </ErrorBoundary>
