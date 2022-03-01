@@ -1,17 +1,23 @@
 import "./App.css";
 import Demo from "./components/Demo";
 import ErrorBoundary from "./components/ErrorBoundary";
+import Contact from './Contact';
+import Welcome from "./Welcome";
 
 function App() {
   return (
     <>
-    <h1>hello</h1>
-      <Demo place="Delhi" />
-      <ErrorBoundary>
-        <Demo />
-      </ErrorBoundary>
+    <Welcome/>
+    
+    <Contact/>
+    
+      
     </>
   );
 }
 
 export default App;
+/*<Demo place="Delhi" />
+      <ErrorBoundary>
+        <Demo />
+      </ErrorBoundary>*/
