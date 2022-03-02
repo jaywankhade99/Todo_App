@@ -25,10 +25,15 @@ hideContact() {
         return(
             <div>
             <button onClick={()=>this.showContact()}>Contacts</button>
-            {this.state.flag && <><h1>Hello My Contact details are: </h1><h2>Phone:{this.state.phone}</h2><h2>email:{this.state.email}</h2></>}
-           
+            {this.state.flag && <>
+            <h1>Hello My Contact details are: </h1>
+            <h2>Phone:{this.state.phone}</h2>
+            <h2>email:{this.state.email}</h2>
             <button onClick={()=>this.hideContact()}>Hide</button>
            {this.state.flag && <></>}
+            </>}
+           
+            
             </div>
         )
     }
